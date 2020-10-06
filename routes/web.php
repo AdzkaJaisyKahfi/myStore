@@ -19,5 +19,6 @@ Route::get('/', function () {
 });
 
 Route::get('table', $url . "\productController@showTable");
+Route::get('tambah', $url . "\productController@addTable");
 Route::get('product/{slug}', $url . "\productController@showProduct");
 Route::resource('product', $url . '\ProductController');

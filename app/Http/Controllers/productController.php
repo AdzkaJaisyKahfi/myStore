@@ -40,5 +40,21 @@ class productController extends Controller {
     
     public function destroy(Product $product) {
       $product->delete();
+      return redirect('table');
+    }
+
+    public function addTable() {
+      return view ('add');
+    }
+
+    public function store(Request $request) {
+      $product = new Product;
+      $product->product_title = $request->product_title;
+      $product->product_slug = \Str::slug($request->product_title);
+      $product->product_image = $request->product_image;
+      $product->product_price = $request->product_price;
+      $product->save();
+
+      return redirect('table');
     }
   }

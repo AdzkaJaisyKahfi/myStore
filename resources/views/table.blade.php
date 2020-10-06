@@ -1,6 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
+<a  href="{{url('tambah')}}" class="btn btn-primary float-right mb-2">Add</a>
 <table class="table table-bordered table-striped table-hover">
     <thead>
       <tr>
@@ -22,10 +23,10 @@
             <form action="{{ route('product.destroy', $merk->id) }}" method="post">
                 @csrf
                 @method('DELETE')
-                <a href="{{ route('product.edit', $merk->id) }}" class="btn btn-warning btn-sm">
-                Ubah</a>
-                <button type="submit" class="btn btn-danger btn-sm">
-                Hapus</i></button>
+                <a href="{{ route('product.edit', $merk->id) }}" class="btn btn-success">
+                Edit</a>
+                <button type="submit" class="btn btn-danger">
+                Delete</i></button>
               </form>
           </td>
       </tr>
