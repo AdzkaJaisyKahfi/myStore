@@ -28,6 +28,10 @@
                 <form action="{{ route('product.update', $product->id) }}" method="post">
                     @csrf
                     @method('PUT')
+                    <!-- <div class="form-group">
+                        <label for="exampleInputEmail1">ID</label>
+                        <input type="text" class="form-control" value="{{$product->product_id}}" name="product_id" readonly>
+                    </div> -->
                     <div class="form-group">
                         <label for="#">Product</label>
                         <input type="text" name="product_title" class="form-control"

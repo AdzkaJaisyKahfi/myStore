@@ -23,7 +23,7 @@
             <form action="{{ route('product.destroy', $merk->id) }}" method="post">
                 @csrf
                 @method('DELETE')
-                <a href="{{ route('product.edit', $merk->id) }}" class="btn btn-success">
+                <a href="{{ route('product.edit', $merk->id) }}" class="btn btn-warning">
                 Edit</a>
                 <button type="submit" class="btn btn-danger">
                 Delete</i></button>

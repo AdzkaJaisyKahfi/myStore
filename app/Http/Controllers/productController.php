@@ -30,6 +30,7 @@ class productController extends Controller {
   
   public function update(Request $request, Product $product) {
     $request->validate([
+      // 'id' => $request->id,
       'product_title' => 'required',
       'product_slug'    => 'required',
       'product_image' => 'required',

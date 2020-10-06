@@ -18,6 +18,7 @@ Route::get('/', function () {
     return view('home');
 });
 
+// Route::get('product/edit/{id}', $url. '\productController@edit');
 Route::get('table', $url . "\productController@showTable");
 Route::get('tambah', $url . "\productController@addTable");
 Route::get('product/{slug}', $url . "\productController@showProduct");
