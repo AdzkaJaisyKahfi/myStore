@@ -16,7 +16,7 @@
             <div class="card mt-md-3">
                 <div class="card-header">
                     <div class="row">
-                        <div class="col text-left">Update Product</div>
+                        <div class="col text-left">Show Product</div>
                         <div class="col text-right">
                         <a href="{{url('table')}}" class="btn btn-sm btn-danger">
                         <i class="fas fa-arrow-left"></i> Back
@@ -25,7 +25,7 @@
                 </div>
             </div>
             <div class="card-body">
-                <form action="{{ route('product.update', $product->id) }}" method="post">
+                <form action="{{ route('product.show', $product->id) }}" method="post">
                     @csrf
                     @method('PUT')
                     <!-- <div class="form-group">
@@ -45,11 +45,8 @@
                     <div class="form-group">
                         <label for="#">Image</label>
                         <input type="text" name="product_image" class="form-control"
-                            placeholder="Gambar" value="{{ $product->product_image }}">
+                            placeholder="Harga Beli" value="{{ $product->product_image }}">
                     </div>
-                    <button type="submit" class="btn btn-primary">
-                    <i class="fas fa-save"></i> Save
-                    </button>
                 </form>
             </div>
             </div>
